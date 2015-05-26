@@ -1,0 +1,258 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.3 (9/9/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[twoside]{article}
+
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+
+%\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+%\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{\today $\bullet$ Rev A} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Customer Requirements}} % Article title
+
+\author{
+\large
+\textsc{Cody Herndon}\\[2mm] % Your name
+%\normalsize Utah State University \\ % Your institution
+\normalsize \href{mailto:codyray.herndon@gmail.com}{codyray.herndon@gmail.com} % Your email address
+\vspace{-5mm}
+}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+
+\noindent This document outlines the customer requirements for a device intended to ease locating a nearby cell phone.  The device is intended to be worn as a necklace, on a bracelet, or on a key chain as a key fob.  When activated, the device will wirelessly signal the connected cell phone to sound an alarm to aid in its location.
+
+\end{abstract}
+
+%------------------------------------------------
+
+\section{Introduction}
+
+This document outlines the customer requirements for a device designed to aid in the location of a lost cell phone (herein referred to as the remote device) in the near proximity of the operator.  This device is intended to bridge the gap left by GPS-based location apps which may tell the operator the general location of the remote device, but is unable to pinpoint the remote device's location.  Additionally, this device should be capable of operating independently of a cellular network or the internet, allowing the operator to locate their cell phone when in remote locations.
+
+As the intended use-case of the device is the activation of a connected phone which may have been misplaced, the device must be connected to phone wirelessly.  Since the device is likely to be used indoors, this wireless connectivity should be reasonably capable of passing through obstacles such as walls and furniture.  Additionally, the device may be needed in the course of the operator's work-day which might include travel over a considerable line-of-sight distance outdoors.
+
+As the device may need to be used at any time, it should be easily carried on the operator's person during the course of their day.  As such, the ideal form factor would be that of a necklace, ring, bracelet charm, or key fob.  Additionally, because the device is to be worn on the operator's person, it should be as inconspicuous as possible to prevent annoyance, barring the use of an external antenna.  Finally, due to its potential for regular proximity to its operator's skin, the device should be free of sharp edges or harsh chemicals.
+
+The device should be as simple to use as possible to facilitate rapid location of a lost phone.  Thus, the device should be capable of being activated with a single button push.
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\section{Scope}
+
+This document pertains only to customer requirements.  Such requirements are often vague and guide designers to key features that are important to an implementation.  For more specific requirements, please refer to the \emph{Engineering Requirements} document.
+
+This document pertains only to the device outlined above and not to a remote device.  The device should be used with a modern ``smart'' cell phone, which often feature numerous wireless interfaces.  Selection of a wireless standard and determination of the fitness of a particular device is beyond the scope of this document.  For more information about the specific selection of wireless interface, and supported phones and devices refer to the \emph{Feasibility Analysis} document.
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\section{Functional}
+This section outlines features and specifications that are required for normal use-case operation.
+\begin{enumerate}
+
+\item Mechanical
+  \begin{enumerate}
+
+  \item The device shall feature an attachment point for a chain or key ring.
+
+  \item The device shall feature a button to activate the associated application.
+
+  \item The device shall feature an internal antenna.
+
+  \end{enumerate}
+
+\item Electrical
+  \begin{enumerate}
+
+  \item Battery and Endurance
+    \begin{enumerate}
+
+    \item The device shall have a battery life of approximately one year.
+
+    \item The device shall feature a means of replenishing the battery power.
+
+    \end{enumerate}
+
+  \item Wireless Connectivity
+
+    \begin{enumerate}
+
+    \item The device shall connect to a remote device wirelessly.
+
+    \item The device shall implement a wireless communication system that is standard on modern (later than 2010) smart phone devices.
+
+    \item The device shall connect to the remote device over a distance approximately the length of a suburban living room.
+
+    \item The device shall be capable of transmitting data wirelessly through obstacles such as walls or furniture.
+
+    \end{enumerate}
+
+  \item Computational
+
+    \begin{enumerate}
+
+    \item Uniqueness
+      \begin{enumerate}
+
+      \item When the device ($\alpha$) is connected to a remote device ($\alpha'$), and an identical device ($\beta$) is connected to another remote device ($\beta'$), the activation of the device ($\alpha$) shall only activate the connected remote device ($\alpha'$).
+
+      \item A device shall only be capable of being connected to a single remote device at any given time.
+
+      \end{enumerate}
+
+
+    \item Companion Application
+      \begin{enumerate}
+
+      \item The companion application shall be capable of receiving and interpreting transmissions from the device.
+
+      \item The companion application shall be capable of sounding an alarm or message tone from the remote device in response to an activation message from the device.
+
+      \end{enumerate}
+
+    \end{enumerate}
+
+  \end{enumerate}
+
+\end{enumerate}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\section{Non-Functional}
+This section outlines features and specifications that relate to the expected operating environment and device durability.
+\begin{enumerate}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\item Mechanical
+  \begin{enumerate}
+
+    \item The device shall be comfortably worn as a necklace or be attached to a key chain.
+
+    \item The device shall be rounded and smooth so as not to injure the operator when worn close to or on the skin.
+
+    \item The device shall be rounded and smooth so as not to catch, snag, scratch, or tear the operator's garments.
+
+    \item The device shall be capable of operating correctly after multiple drops from the approximate height of the top of an operator's head.
+
+  \end{enumerate}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\item Environmental
+  \begin{enumerate}
+
+  \item The device shall be capable of operating correctly under heavy clothing or close to or on the skin of an operator.
+
+  \item The device shall be capable of operating correctly under high humidity conditions.
+
+  \item The device shall feature a rigid housing that resists penetration.
+
+  \item The device shall be water resistant or waterproof.
+
+  \item The device shall feature dust and particle ingress protection.
+
+  \item The device shall feature a rigid housing that does not become pliable due to heat, pressure, or humidity when worn under heavy clothing or close to or on the skin of the operator.
+
+  \item The device shall feature a rigid housing that does not irritate the skin when in continuous contact.
+
+  \end{enumerate}
+
+\end{enumerate}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\section{Revision History}
+
+\center
+\begin{tabular}{|c|p{10cm}|}
+  \hline
+  2015-05-26 & Inital production \\\hline
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+%\bibliography{sources.bib}{}
+%\bibliographystyle{plain}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
