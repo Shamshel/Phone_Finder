@@ -1,0 +1,66 @@
+Overview Docs:
+http://www.digikey.com/en/articles/techzone/2014/jun/how-to-build-low-power-wireless-systems-using-bluetooth-smart-4
+http://en.wikipedia.org/wiki/Bluetooth_low_energy
+
+------------------- Battery life -------------------
+Is 1 year feasable? ---------
+Standard button cell battery (Alkaline) capacity is 150mAh (http://en.wikipedia.org/wiki/Button_cell)
+
+Assume 15 mA peak transfer current
+Using DigiKey battery life estimator (http://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-battery-life)
+7 hours fully active peak transmit
+
+7hr/yr=3600s/1hr*yr/365day=69.04s/day
+
+typical transmit time is a few mS
+
+--------------------- Chipsets ---------------------
+
+RN4020+PIC12lf
+	RN4020=$18 + pic12lf=$0.5
+	~16mA peak transmit power
+	3.3-1.8 - (on system DC/DC converter to minimize current at 1.8V?)
+	RN4020 all in one--low TTM
+	Simple UART+GPIO interrupt and sleep profiles
+	Fixed GATT (SPP-Serial Port Profile)
+	Larger board space occupied
+
+Nordic nRF51822
+	$1-5 per SoC + BoM
+	ARM cortex-M0 (way overkill computationally)
+	REALLY cool
+		DC/DC converter
+		LDO
+		generous number of board layouts/schematic examples
+		BoM for all of the above
+	10.5mA TX at 0dBm
+	16mA TX at +4dBm
+	Would need debugger/programmer $60+shipping: (j-link edu: http://shop-us.segger.com/J_Link_EDU_p/8.08.90.htm)
+	
+
+Texas Instruments CC2640
+	$7 per SoC + BoM
+	ARM cortex-M0 + ARM cortex-M3 (way wayyy overkill computationally)
+	also, REALLY cool
+		DC/DC converter
+		onboard battery monitor
+		numerous example schematics/layouts and reference examples
+	6.1mA TX at 0dBm (!?!)
+	9.1mA TX at +5dBm (!?!)
+	Would need debugger/programmer $129.00+shipping: (XDS100v3: http://www.spectrumdigital.com/product_info.php?products_id=251)
+
+bluegiga (silicon labs) BLE113/BLE112
+	$14.72 per SoC
+	based on TI CC25XX 8051 (circa 1990? apparently enhanced and still used)
+	completely contained SoC, this and a supply is basically all that's needed
+	pretty cool
+		direct to USB programming and debugging (after firmware update)
+		can be programmed in a scripting language (BGScript) or in C
+		LOTS of BGScript examples
+		flexible GATT definitions
+		some appnotes, no BoM
+	max TX power 0 dBm :/
+	18.2 mA at 0 dBm
+	14.3 mA at 0 dBm with suggested DC/DC
+	submitted user account registration for access to documentation (really? register for documents?)
+	Would need debugger/programmer $49.00+shipping (CC Debugger: http://www.ti.com/tool/cc-debugger)
