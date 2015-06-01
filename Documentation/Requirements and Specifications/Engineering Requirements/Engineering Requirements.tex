@@ -22,10 +22,10 @@
 
 \usepackage{lipsum} % Package to generate dummy text throughout this template
 
-\usepackage[sc]{mathpazo} % Use the Palatino font
+%\usepackage[sc]{mathpazo} % Use the Palatino font
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\linespread{1.05} % Line spacing - Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+%\linespread{1.05} % Line spacing - Palatino needs more space between lines
+%\usepackage{microtype} % Slightly tweak font spacing for aesthetics
 
 \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
 \usepackage{multicol} % Used for the two-column layout of the document
@@ -51,14 +51,14 @@
 \pagestyle{fancy} % All pages have headers and footers
 \fancyhead{} % Blank out the default header
 \fancyfoot{} % Blank out the default footer
-\fancyhead[C]{Running title $\bullet$ November 2012 $\bullet$ Vol. XXI, No. 1} % Custom header text
+\fancyhead[C]{\today $\bullet$ Rev A} % Custom header text
 \fancyfoot[RO,LE]{\thepage} % Custom footer text
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Template}} % Article title
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Engineering Requirements}} % Article title
 
 \author{
 \large
@@ -121,10 +121,6 @@ This section outlines features and specifications that are required for normal u
 
 \item Mechanical
   \begin{enumerate}
-
-  \item The device shall feature a rigid case that encapsulates all digital components and radio transceiver components.
-  
-  \item The device shall feature mounting holes through both the PCB and the case.
   
   \item The device shall feature a single actuator to activate the device's primary functionality.
 
@@ -133,12 +129,16 @@ This section outlines features and specifications that are required for normal u
 \item Electrical
   \begin{enumerate}
 
-  \item Battery and Endurance
+  \item Power and Endurance
     \begin{enumerate}
 
-    \item The device shall feature a battery capacity of no less than 100 mAh.
+    \item The device shall feature one or more on-board power supplies.
+
+    \item The device shall feature a power supply system with a capacity of no less than 100 mAh.
 	
-	\item The device shall feature a means of replenishing battery capacity.
+    \item The device shall feature a means of replenishing the power supply capacity.
+
+    \item If the device requires an external power supply to replenish the on-board power supply capacity, the device shall feature a USB 2.0 micro B female receptacle to receive the input power.
 
     \end{enumerate}
 
@@ -148,11 +148,11 @@ This section outlines features and specifications that are required for normal u
 
     \item The device shall connect to a remote device wirelessly.
 
-    \item The device shall implement a wireless communication system that is standard on modern (later than 2010) smart phone devices.
+    \item The device shall implement a wireless communication system that is natively supported on iOS 4.0 or later, and Android 2.2 (Codename ``Froyo'') or later.
 
-    \item The device shall connect to the remote device over a distance approximately the length of a suburban living room.
+    \item If a communication standard is only supported by operating systems later than iOS 4.0 or Android 2.2 (Codename ``Froyo''), the design documentation must specify the minimum version supported.
 
-    \item The device shall be capable of transmitting data wirelessly through obstacles such as walls or furniture.
+    \item The device shall connect\footnote{Capable of both transmission and reception of data.} to the remote device over an unobstructed linear distance of 20 feet (6.1 meters).
 
     \end{enumerate}
 
@@ -163,7 +163,7 @@ This section outlines features and specifications that are required for normal u
     \item Uniqueness
       \begin{enumerate}
 
-      
+      \item The device shall feature a unique address to differentiate itself from the other devices active in an area.
 
       \end{enumerate}
 
@@ -171,7 +171,13 @@ This section outlines features and specifications that are required for normal u
     \item Companion Application
       \begin{enumerate}
 
-      
+      \item The companion application shall be capable of receiving and interpreting transmissions from the device.
+
+      \item The companion application shall be capable of sounding an alarm or message tone from the remote device in response to an activation message from the device.
+
+      \item The companion application shall be capable of pairing and storing the unique address of a device.
+
+      \item The companion application shall only respond to requests for activation from a device whose unique address matches the stored unique address.
 
       \end{enumerate}
 
@@ -196,7 +202,17 @@ This section outlines features and specifications that relate to the expected op
 \item Mechanical
   \begin{enumerate}
 
-    
+  \item The device shall feature a rigid case that encapsulates all digital components and radio transceiver components.
+  
+  \item The device shall feature mounting holes through both the PCB and the case.
+
+  \item The mounting holes in the PCB and the case shall be a minimum of 1/8th inch (3.175 mm) in diameter.
+
+  \item The PCB dimensions shall not exceed 5 inches by 5 inches by 1 inch (127 mm by 127 mm by 25.4 mm).
+
+  \item The PCB shall feature rounded corners of no less than 1/8th inch (3.175 mm) in diameter.
+
+  \item The device shall be capable of absorbing repeated shock equivalent to a free fall onto concrete from 6 feet.
 
   \end{enumerate}
 
@@ -207,7 +223,15 @@ This section outlines features and specifications that relate to the expected op
 \item Environmental
   \begin{enumerate}
 
-  
+  \item The device shall be capable of operating in temperatures ranging from -20 degrees Fahrenheit to 90 degrees Fahrenheit (-28.9 degrees Celsius to 32.2 degrees Celsius).
+
+  \item The rigid case for the device shall resist water and solvent ingress.
+
+  \item The rigid case for the device shall not exude fumes of any kind while operating below the glass transition or melting temperature.
+
+  \item The rigid case for the device shall not exude chemical skin, respitory, or eye irritants of any kind while operating below the glass transition or melting temperature.
+
+  \item The rigid case for the device shall have a glass transition or melting temperature of no less than 110 degrees Farenheit (43.3 degrees Celsius).
 
   \end{enumerate}
 
@@ -216,6 +240,28 @@ This section outlines features and specifications that relate to the expected op
 %------------------------------------------------
 
 %------------------------------------------------
+
+\section{Testing and Verification}
+
+\center
+\begin{tabular}{|c|p{10cm}|c|}
+  \hline
+  Specification & Test Description & Met \\\hline
+
+\end{tabular}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\section{Revision History}
+
+\center
+\begin{tabular}{|c|p{10cm}|}
+  \hline
+  2015-05-31 & Initial production \\\hline
+
+\end{tabular}
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
