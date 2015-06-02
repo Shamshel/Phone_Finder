@@ -1,0 +1,268 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Phone_Finder-cache
+LIBS:Phone_Finder-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date "2 jun 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TPS62730 U?
+U 1 1 556D308F
+P 5650 3700
+F 0 "U?" H 5650 3600 50  0000 C CNN
+F 1 "TPS62730" H 5650 3800 50  0000 C CNN
+F 2 "MODULE" H 5650 3700 50  0001 C CNN
+F 3 "DOCUMENTATION" H 5650 3700 50  0001 C CNN
+	1    5650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR L?
+U 1 1 556D316F
+P 4300 3700
+F 0 "L?" V 4250 3700 40  0000 C CNN
+F 1 "INDUCTOR" V 4400 3700 40  0000 C CNN
+F 2 "~" H 4300 3700 60  0000 C CNN
+F 3 "~" H 4300 3700 60  0000 C CNN
+	1    4300 3700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 3700 4600 3700
+$Comp
+L C C?
+U 1 1 556D318A
+P 3900 4300
+F 0 "C?" H 3900 4400 40  0000 L CNN
+F 1 "2.2uF" H 3906 4215 40  0000 L CNN
+F 2 "~" H 3938 4150 30  0000 C CNN
+F 3 "~" H 3900 4300 60  0000 C CNN
+	1    3900 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3700 3900 3700
+Wire Wire Line
+	3900 3300 3900 4100
+Wire Wire Line
+	6400 3600 7150 3600
+Wire Wire Line
+	6450 3600 6450 3300
+Wire Wire Line
+	6450 3300 3900 3300
+Connection ~ 3900 3700
+Wire Wire Line
+	6400 3700 6900 3700
+Text HLabel 6900 3700 2    60   Input ~ 0
+DCDC
+Wire Wire Line
+	6400 3800 6450 3800
+Wire Wire Line
+	6450 3800 6450 3900
+$Comp
+L GND #PWR?
+U 1 1 556D320D
+P 6450 3900
+F 0 "#PWR?" H 6450 3900 30  0001 C CNN
+F 1 "GND" H 6450 3830 30  0001 C CNN
+F 2 "" H 6450 3900 60  0000 C CNN
+F 3 "" H 6450 3900 60  0000 C CNN
+	1    6450 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4500 3900 4600
+$Comp
+L GND #PWR?
+U 1 1 556D3228
+P 3900 4600
+F 0 "#PWR?" H 3900 4600 30  0001 C CNN
+F 1 "GND" H 3900 4530 30  0001 C CNN
+F 2 "" H 3900 4600 60  0000 C CNN
+F 3 "" H 3900 4600 60  0000 C CNN
+	1    3900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L BATTERY BT?
+U 1 1 556D3237
+P 2400 4300
+F 0 "BT?" H 2400 4500 50  0000 C CNN
+F 1 "BATTERY" H 2400 4110 50  0000 C CNN
+F 2 "~" H 2400 4300 60  0000 C CNN
+F 3 "~" H 2400 4300 60  0000 C CNN
+	1    2400 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 3800 4900 3800
+Wire Wire Line
+	2400 3800 2400 4000
+Connection ~ 2400 3800
+Wire Wire Line
+	3150 3800 3150 3600
+Connection ~ 3150 3800
+$Comp
+L +BATT #PWR?
+U 1 1 556D3271
+P 3150 3600
+F 0 "#PWR?" H 3150 3550 20  0001 C CNN
+F 1 "+BATT" H 3150 3700 30  0000 C CNN
+F 2 "" H 3150 3600 60  0000 C CNN
+F 3 "" H 3150 3600 60  0000 C CNN
+	1    3150 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 556D3280
+P 1850 4150
+F 0 "C?" H 1850 4250 40  0000 L CNN
+F 1 "100uF" H 1856 4065 40  0000 L CNN
+F 2 "~" H 1888 4000 30  0000 C CNN
+F 3 "~" H 1850 4150 60  0000 C CNN
+	1    1850 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 3800 1850 3950
+Wire Wire Line
+	1850 4350 1850 4450
+$Comp
+L GND #PWR?
+U 1 1 556D32B3
+P 1850 4450
+F 0 "#PWR?" H 1850 4450 30  0001 C CNN
+F 1 "GND" H 1850 4380 30  0001 C CNN
+F 2 "" H 1850 4450 60  0000 C CNN
+F 3 "" H 1850 4450 60  0000 C CNN
+	1    1850 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4600 2400 4700
+$Comp
+L GND #PWR?
+U 1 1 556D32D6
+P 2400 4700
+F 0 "#PWR?" H 2400 4700 30  0001 C CNN
+F 1 "GND" H 2400 4630 30  0001 C CNN
+F 2 "" H 2400 4700 60  0000 C CNN
+F 3 "" H 2400 4700 60  0000 C CNN
+	1    2400 4700
+	1    0    0    -1  
+$EndComp
+Connection ~ 6450 3600
+Wire Wire Line
+	2850 3800 2850 3600
+Connection ~ 2850 3800
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 556D3476
+P 2850 3600
+F 0 "#FLG?" H 2850 3695 30  0001 C CNN
+F 1 "PWR_FLAG" H 2850 3780 30  0000 C CNN
+F 2 "" H 2850 3600 60  0000 C CNN
+F 3 "" H 2850 3600 60  0000 C CNN
+	1    2850 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3600 6900 3450
+$Comp
+L VDD #PWR?
+U 1 1 556D34BA
+P 6900 3450
+F 0 "#PWR?" H 6900 3550 30  0001 C CNN
+F 1 "VDD" H 6900 3560 30  0000 C CNN
+F 2 "" H 6900 3450 60  0000 C CNN
+F 3 "" H 6900 3450 60  0000 C CNN
+	1    6900 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3600 7150 3450
+Connection ~ 6900 3600
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 556D34F5
+P 7150 3450
+F 0 "#FLG?" H 7150 3545 30  0001 C CNN
+F 1 "PWR_FLAG" H 7150 3630 30  0000 C CNN
+F 2 "" H 7150 3450 60  0000 C CNN
+F 3 "" H 7150 3450 60  0000 C CNN
+	1    7150 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3800 3000 3950
+Connection ~ 3000 3800
+$Comp
+L C C?
+U 1 1 556D40E4
+P 3000 4150
+F 0 "C?" H 3000 4250 40  0000 L CNN
+F 1 "2.2uF" H 3006 4065 40  0000 L CNN
+F 2 "~" H 3038 4000 30  0000 C CNN
+F 3 "~" H 3000 4150 60  0000 C CNN
+	1    3000 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 4350 3000 4450
+$Comp
+L GND #PWR?
+U 1 1 556D4110
+P 3000 4450
+F 0 "#PWR?" H 3000 4450 30  0001 C CNN
+F 1 "GND" H 3000 4380 30  0001 C CNN
+F 2 "" H 3000 4450 60  0000 C CNN
+F 3 "" H 3000 4450 60  0000 C CNN
+	1    3000 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3600 4800 3600
+Text HLabel 4800 3600 0    60   Input ~ 0
+STAT
+$EndSCHEMATC
