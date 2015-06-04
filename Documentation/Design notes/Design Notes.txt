@@ -64,3 +64,7 @@ bluegiga (silicon labs) BLE113/BLE112
 	14.3 mA at 0 dBm with suggested DC/DC
 	submitted user account registration for access to documentation (really? register for documents?)
 	Would need debugger/programmer $49.00+shipping (CC Debugger: http://www.ti.com/tool/cc-debugger)
+
+------------- BLE112 Custom C Firmware -------------
+
+https://flashandrc.wordpress.com/2014/08/26/bluetooth-hid-firmware-tested-on-hm-10/
