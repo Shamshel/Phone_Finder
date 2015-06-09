@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 6/4/2015 12:39:19 AM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 6/6/2015 8:16:52 PM
 
 BeginCmp
 TimeStamp = /556D2FFB/556F7D16;
@@ -11,63 +11,49 @@ BeginCmp
 TimeStamp = /556D39EE;
 Reference = C1;
 ValeurCmp = 1uF;
-IdModule  = SM0402;
+IdModule  = SM0603_Capa;
 EndCmp
 
 BeginCmp
 TimeStamp = /556D3A7A;
 Reference = C2;
 ValeurCmp = 1uF;
-IdModule  = SM0402;
+IdModule  = SM0603_Capa;
 EndCmp
 
 BeginCmp
 TimeStamp = /556D2FFB/556D3280;
 Reference = C3;
 ValeurCmp = 100uF;
-IdModule  = SM0402;
+IdModule  = SM0603_Capa;
 EndCmp
 
 BeginCmp
 TimeStamp = /556D2FFB/556D40E4;
 Reference = C4;
 ValeurCmp = 2.2uF;
-IdModule  = SM0402;
+IdModule  = SM0603_Capa;
 EndCmp
 
 BeginCmp
 TimeStamp = /556D2FFB/556D318A;
 Reference = C5;
 ValeurCmp = 2.2uF;
-IdModule  = SM0402;
-EndCmp
-
-BeginCmp
-TimeStamp = /556D2FFD/556F6108;
-Reference = C6;
-ValeurCmp = Cx;
-IdModule  = SM0402;
-EndCmp
-
-BeginCmp
-TimeStamp = /556D2FFD/556F5E74;
-Reference = C7;
-ValeurCmp = Cs;
-IdModule  = SM0402;
-EndCmp
-
-BeginCmp
-TimeStamp = /556D2FFD/556F65DC;
-Reference = C8;
-ValeurCmp = 0.1uF;
-IdModule  = SM0402;
+IdModule  = SM0603_Capa;
 EndCmp
 
 BeginCmp
 TimeStamp = /556FEE6E;
 Reference = C9;
 ValeurCmp = 1uF;
-IdModule  = SM0402;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /556D2FFD/55739A1C;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
@@ -85,17 +71,31 @@ IdModule  = pinhead-1-2X05SMD/90;
 EndCmp
 
 BeginCmp
-TimeStamp = /556D2FFD/556F60DB;
-Reference = P2;
-ValeurCmp = CONN_1;
-IdModule  = ;
+TimeStamp = /556D2FFD/5573999B;
+Reference = Q1;
+ValeurCmp = NPN;
+IdModule  = SOT23;
 EndCmp
 
 BeginCmp
-TimeStamp = /556D2FFD/556F5E65;
+TimeStamp = /556D2FFD/55739A49;
 Reference = R1;
-ValeurCmp = Rs;
-IdModule  = SM0402;
+ValeurCmp = R;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /556D2FFD/5573AA89;
+Reference = R2;
+ValeurCmp = 10k;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /556D2FFD/55736C53;
+Reference = SW1;
+ValeurCmp = SPST;
+IdModule  = KSC_GULLWING;
 EndCmp
 
 BeginCmp
@@ -110,13 +110,6 @@ TimeStamp = /556D2FFB/556D308F;
 Reference = U2;
 ValeurCmp = TPS62730;
 IdModule  = SON6;
-EndCmp
-
-BeginCmp
-TimeStamp = /556D2FFD/556D309E;
-Reference = U3;
-ValeurCmp = AT42QT1011;
-IdModule  = SOT23_6;
 EndCmp
 
 EndListe
