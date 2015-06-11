@@ -1,0 +1,40 @@
+eeschema (2013-07-07 BZR 4022)-stable  >> Creation date: 6/10/2015 9:32:04 PM
+#Cmp ( order = Reference )
+| BT1        BATTERY     ; BHX1-2032-SM
+| C1         1uF         ; SM0603_Capa 
+| C2         1uF         ; SM0603_Capa 
+| C3         100uF       ; SM0603_Capa 
+| C4         2.2uF       ; SM0603_Capa 
+| C5         2.2uF       ; SM0603_Capa 
+| C9         1uF         ; SM0603_Capa 
+| D1         LED         ; LED-0805    
+| L1         2.2uH       ; SM0603      
+| P1         CONN_5X2    ; pinhead-1-2X05SMD/90
+| Q1         NPN         ; SOT23       
+| R1         R           ; SM0603      
+| R2         10k         ; SM0603      
+| SW1        SPST        ; KSC_GULLWING
+| U1         BLE112      ; BLE112-A    
+| U2         TPS62730    ; SON6        
+#End Cmp
+
+#Cmp ( order = Value )
+| BATTERY      BT1       ; BHX1-2032-SM
+| 1uF          C1        ; SM0603_Capa 
+| 1uF          C2        ; SM0603_Capa 
+| 1uF          C9        ; SM0603_Capa 
+| 2.2uF        C4        ; SM0603_Capa 
+| 2.2uF        C5        ; SM0603_Capa 
+| 100uF        C3        ; SM0603_Capa 
+| LED          D1        ; LED-0805    
+| 2.2uH        L1        ; SM0603      
+| CONN_5X2     P1        ; pinhead-1-2X05SMD/90
+| NPN          Q1        ; SOT23       
+| 10k          R2        ; SM0603      
+| R            R1        ; SM0603      
+| SPST         SW1       ; KSC_GULLWING
+| BLE112       U1        ; BLE112-A    
+| TPS62730     U2        ; SON6        
+#End Cmp
+
+#End List
